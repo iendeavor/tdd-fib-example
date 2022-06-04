@@ -31,3 +31,15 @@ test('fib(2) should call fib(1) and fib(0)', () => {
   expect(spyFib).toHaveBeenCalledWith(1)
   expect(spyFib).toHaveBeenCalledWith(0)
 })
+
+test('fib(3) should call fib(3), fib(2), fib(1), and fib(0) only once', () => {
+  const spyFib = jest.spyOn(fibModule, 'fib')
+
+  spyFib(3)
+
+  expect(spyFib).toHaveBeenCalledTimes(4)
+  expect(spyFib).toHaveBeenCalledWith(3)
+  expect(spyFib).toHaveBeenCalledWith(2)
+  expect(spyFib).toHaveBeenCalledWith(1)
+  expect(spyFib).toHaveBeenCalledWith(0)
+})
