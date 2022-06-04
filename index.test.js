@@ -1,8 +1,12 @@
 const fibModule = require('.')
-const { fib } = fibModule
+const { fib, cache } = fibModule
 
 afterEach(() => {
   jest.clearAllMocks()
+
+  for (const key in cache) {
+    delete cache[key]
+  }
 })
 
 test('fib should be a function', () => {
