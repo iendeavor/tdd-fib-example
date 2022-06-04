@@ -11,3 +11,7 @@ test('fib(0) should be 0', () => {
 test('fib(1) should be 1', () => {
   expect(fib(1)).toBe(1)
 })
+
+test('fib(2) should be 1', () => {
+  expect(fib(2)).toBe(1)
+})
