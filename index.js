@@ -1,5 +1,5 @@
-const fib = () => {
-  return 0
+const fib = (n) => {
+  return n
 }
 
 module.exports = {
